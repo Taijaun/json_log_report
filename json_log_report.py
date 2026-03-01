@@ -176,25 +176,7 @@ def main():
                     service = obj["service"].strip().lower()
                     action = obj["action"].strip().lower()
 
-                    logging.debug("Line %d: level=%s service=%s action=%s", lineno, service, action)
-
-                    # Deal with level metric
-                    if level not in valid_levels:
-                        if args.strict:
-                            logging.error(
-                                "Line %d: invalid level metric (expected info, warn, error). Content=%r",
-                                lineno,
-                                line
-                                )
-                            raise SystemExit(1)
-                        else:
-                            logging.warning(
-                                "Line %d: invalid level metric (expected info, warn, level). Content=%r",
-                                lineno,
-                                line
-                                )
-                            skipped_lines += 1
-                            continue
+                    logging.debug("Line %d: level=%s service=%s action=%s", lineno, level, service, action)
 
 
                     levels[level] += 1
@@ -233,7 +215,7 @@ def main():
                 
 
     except FileNotFoundError:
-        logging.error("File not found: %s", input)
+        logging.error("File not found: %s", input_file)
         raise SystemExit(1)
     
     if not actions:
