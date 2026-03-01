@@ -1,0 +1,19 @@
+{"timestamp": "2026-03-01T10:00:00Z", "level": "info", "service": "auth", "action": "login", "user": "taijaun"}
+{"timestamp": "2026-03-01T10:01:00Z", "level": "error", "service": "billing", "action": "payment_failed", "user": "bob"}
+{"timestamp": "2026-03-01T10:02:00Z", "level": "warn", "service": "auth", "action": "timeout"}
+
+{"timestamp": "2026-03-01T10:03:00Z", "level": "info", "service": "auth", "action": "logout", "extra_field": "ignored"}
+
+{"timestamp": "2026-03-01T10:04:00Z", "level": "INFO", "service": "Auth", "action": "Login"}
+
+{"timestamp": "2026-03-01T10:05:00Z", "level": "debug", "service": "auth", "action": "cache_refresh"}
+
+{"timestamp": "2026-03-01T10:06:00Z", "level": "warn", "service": "billing"}
+
+{"timestamp": "2026-03-01T10:07:00Z", "level": "error", "service": "", "action": "refund_failed"}
+
+{"timestamp": "2026-03-01T10:08:00Z", "level": "info", "service": "auth", "action": ""}
+
+{bad json line here}
+
+{"timestamp": "2026-03-01T10:09:00Z", "level": "warn", "service": "auth", "action": "timeout"}
